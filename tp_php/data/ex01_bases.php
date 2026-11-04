@@ -52,5 +52,28 @@ Il ne faut donc pas utiliser une constante avant de vérifier son existence.*/
 const permet de déclarer une constante directement dans le code.
 define() permet de créer une constante avec une fonction.
 define() peut être appelée conditionnellement, contrairement à const.*/
+### Exercice 1.5 : Chaînes de caractèresvar
+$traitees = "égales à";
+$ici =2;
+//1. `Ahmed a dit : "J'ai réussi"`
+echo '<br> Ahmed a dit : "J\'ai réussi"';
+//2. `Voulez-vous supprimer C:\*.*?`
+echo'<br> Voulez-vous supprimer C:\*.*?';
+//3. `Ceci n'affichera pas \n de nouvelle ligne` (le `\n` doit apparaître tel quel)
+echo'<br> Ceci n\'affichera pas \n de nouvelle ligne ';
+//4. `Les variables ne seront pas $traitees $ici` (variables non interprétées)
+echo'<br> les varaibles ne seront pas $traitees $ici';
+//5. `Les variables seront égales à 2` (variables interprétées)
+echo"<br> les varaibles seront $traitees $ici";
+//- retirez les `*` de la chaîne `"*Bonjour les développeurs*"` avec `trim()` ;
+$texte = "*Bonjour les developpeurs*";
+$resultat = trim($texte,"*");
+echo "<br>";
+echo"$resultat";
+echo "<br>";
+//- affichez chaque lettre sur une ligne différente, avec `strlen()` et une boucle `for`. 
+for ($i = 0; $i < strlen($resultat); $i++) {
+    echo $resultat[$i] . "<br>";
+}
 
 ?>
