@@ -68,7 +68,7 @@ switch ($numeroMOIS){
 echo "<br> Nous sommes au mois de " . $mois."<br>";
 echo"<hr>"; 
 //Question : que se passe-t-il si vous oubliez un break dans un case ?
-####
+####PHP continuera à exécuter les cas suivants jusqu'à ce qu'il rencontre un `break` ou que le `switch` se termine.
 #------Exercice 2.3 : Boucles------#
 //Avec deux boucles for imbriquées, affichez ce triangle :
 $i=0;
@@ -115,4 +115,15 @@ while(true){
     };
     $i++;
 };
+//Réécrivez la question 2 avec do-while. Quelle est la différence essentielle avec while ?
+echo"<hr>";
+$k=0;
+do{
+     if($k==10){
+        echo"<br><b>$k</b><br>";
+    }else {
+        echo"<br>$k<br>";    
+    }
+    $k+=2;   
+} while($k<=20 );
 ?>
