@@ -9,9 +9,12 @@ $notes = [
 ];
 $modules=["programmation web","UML","systeme d'exploitation"];
 
-foreach($notes as $nom => $note ){
-    echo "<br> NOM : $nom <br> NOTE : $note <br>";
-};
+function afficher($tab) {
+    foreach ($tab as $nom => $note) {
+        echo $nom . " : " . $note . "<br>";
+    }
+}
+afficher($notes);
 echo"<hr>";
 echo $modules[0] . "<br>";
 echo $modules[1] . "<br>";
@@ -99,11 +102,32 @@ foreach ($notes as $nom => $note) {
     }
 }
 
-echo "$effectifs";
+echo "<pre>";
+print_r($effectifs);
+echo "</pre>";
+#-----Exercice 3.4 : Tri------#
 
-
-
-
-
+echo"<hr>";
+//1. le tableau trié par noms croissants (`ksort`) ;
+echo "<h3>Tri par noms croissants</h3>";
+ksort($notes);
+afficher($notes);
+//2. le tableau trié par notes décroissantes (`arsort`) ;
+echo "<h3>Tri par notes décroissantes</h3>";
+arsort($notes);
+afficher($notes);
+//3. le tableau trié par noms décroissants (`krsort`) ;
+echo "<h3>Tri par noms décroissants</h3>";
+krsort($notes);
+afficher($notes);
+//4. le tableau trié par notes croissantes (`asort`).
+echo "<h3>Tri par notes croissantes</h3>";
+asort($notes);
+afficher($notes);
+//Question : quelle fonction de tri utiliser sur un tableau indexé comme `$modules` ?
+/*==> Pour trier un tableau indexé comme `$modules`,
+vous pouvez utiliser la fonction `sort()` pour trier les éléments par ordre croissant ou `rsort()` pour trier par ordre décroissant.
+Ces fonctions réorganisent les éléments du tableau en fonction de leur valeur.
+*/
 
 ?>
